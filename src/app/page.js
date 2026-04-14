@@ -1,9 +1,12 @@
-import Image from "next/image";
+import Banner from "@/components/homePage/banner/Banner";
+import YourFriends from "@/components/yourFriends/YourFriends";
+
 
 export default function Home() {
   return (
-    <div>
-      <h1> this is home</h1>
-    </div>
+    <>
+      <Banner />
+      <YourFriends/>
+    </>
   );
 }
