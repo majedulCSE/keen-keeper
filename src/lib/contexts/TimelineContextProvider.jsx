@@ -5,13 +5,13 @@ export const TimelineContext = createContext();
 
 const TimelineContextProvider = ({ children }) => {
   const [timelines, setTimelines] = useState([]);
-  const [trackingBtn, setTrackingBtn] = useState("");
+  const [selectedType, setSelectedType] = useState("All");
 
   const value = {
     timelines,
     setTimelines,
-    trackingBtn,
-    setTrackingBtn,
+    selectedType,
+    setSelectedType,
   };
 
   return (

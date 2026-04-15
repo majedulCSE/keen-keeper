@@ -5,7 +5,12 @@ import { HiOutlineBellSnooze } from "react-icons/hi2";
 import { RiDeleteBin6Line } from "react-icons/ri";
 
 const FriendDetailsPageLeft = ({ matchFriend }) => {
-  const { picture, tags, bio, email, name, status } = matchFriend;
+  if (!matchFriend) {
+    return <div>Loading...</div>;
+  }
+
+  const { picture, tags = [], bio, email, name, status } = matchFriend;
+
   return (
     <div className="col-span-1  space-y-5 px-5 max-w-xl">
       <div className="card bg-base-100  shadow-sm">

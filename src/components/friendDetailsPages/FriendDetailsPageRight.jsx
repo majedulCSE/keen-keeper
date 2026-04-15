@@ -5,22 +5,64 @@ import { BiMessageDots } from "react-icons/bi";
 import { LiaVideoSolid } from "react-icons/lia";
 import { LuPhoneCall } from "react-icons/lu";
 import { MdHistory } from "react-icons/md";
+import FriendDetailsTimelineCard from "../ui/FriendDetailsTimelineCard";
+import { toast } from "react-toastify";
+import Link from "next/link";
 
 const FriendDetailsPageRight = ({ matchFriend }) => {
   const { days_since_contact, goal, next_due_date } = matchFriend;
 
-  const { timelines, setTimelines, trackingBtn, setTrackingBtn } =
-    useContext(TimelineContext);
+  const { timelines, setTimelines } = useContext(TimelineContext);
   //   console.log(timelines);
 
+  const date = new Date();
+
+  const formatted = date.toLocaleDateString("en-US", {
+    year: "numeric",
+    month: "short",
+    day: "numeric",
+  });
+
+  // console.log(formatted);
   const btnHandler = (btn) => {
     // console.log("call btn clicked", btn);
 
-    setTrackingBtn(btn);
-    setTimelines([...timelines, matchFriend]);
+    const newTimeline = {
+      ...timelines,
+      type: btn,
+      formatted,
+      matchFriend,
+    };
+
+    const reverseTimeline = [...timelines, newTimeline].reverse();
+    setTimelines(reverseTimeline);
+
+    if (btn === "call") {
+      toast.success(
+        <span className="flex items-center gap-2">
+          <LuPhoneCall /> Calling {matchFriend.name}...
+        </span>,
+        { position: "top-center" },
+      );
+    } else if (btn === "text") {
+      toast.success(
+        <span className="flex items-center gap-2">
+          <BiMessageDots /> Message sent to {matchFriend.name}
+        </span>,
+        { position: "top-center" },
+      );
+    } else {
+      toast.success(
+        <span className="flex items-center gap-2">
+          <LiaVideoSolid /> Starting video call with {matchFriend.name}
+        </span>,
+        { position: "top-center" },
+      );
+    }
   };
 
-  console.log("tracking btn", trackingBtn);
+  // console.log("tracking btn", trackingBtn);
+  // console.log({ timelines: timelines });
 
   return (
     <div className="col-span-1 lg:col-span-2 px-5   space-y-5">
@@ -96,46 +138,25 @@ const FriendDetailsPageRight = ({ matchFriend }) => {
       </div>
 
       <div className=" p-8 rounded-lg bg-base-100   shadow-sm space-y-3">
-        <div className="flex flex-col md:flex-row justify-between items-center">
+        <div className="flex flex-col md:flex-row justify-between gap-4 items-center">
           <p className="text-2xl text-black/75 font-semibold">
             Recent Interactions
           </p>
-          <button className="btn text-xl text-black">
-            <MdHistory />
-            Full History
-          </button>
+          <Link href={"/timeline"}>
+            <button className="btn text-xl text-black">
+              <MdHistory />
+              Full History
+            </button>
+          </Link>
         </div>
 
-        {timelines.map((timeline, ind) => (
-          <div key={ind} className=" text-xl text-black/50">
-            <div>
-              {trackingBtn === "call" && (
-                <LuPhoneCall className="text-4xl font-bold mb-4" />
-              )}
-              {trackingBtn === "text" && (
-                <BiMessageDots className="text-4xl font-bold mb-4" />
-              )}
-              {trackingBtn === "video" && (
-                <LiaVideoSolid className="text-4xl font-bold mb-4" />
-              )}
-              <div>
-                <p>
-                  {trackingBtn === "call" && "Meetup"}
-                  {trackingBtn === "text" && "text"}
-                  {trackingBtn === "video" && "Video"}
-                </p>
+        {
+          timelines.slice(0, 4).map((timeline, ind) => (
+            <FriendDetailsTimelineCard key={ind} timeline={timeline} />
+          ))
 
-                <p>
-                  {trackingBtn === "call" && "Industry conference meetup"}
-                  {trackingBtn === "text" && "Asked for career advice"}
-                  {trackingBtn === "video" && "Asked for career advice"}
-                </p>
-
-              </div>
-            </div>
-            <span className="font-semibold text-black"> {goal} days</span>
-          </div>
-        ))}
+          //  { console.log(timeline);}
+        }
       </div>
     </div>
   );
