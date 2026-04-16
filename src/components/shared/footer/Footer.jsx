@@ -36,7 +36,7 @@ const Footer = () => {
         <aside className="flex flex-col md:flex-row gap-5 justify-between items-center my-10 ">
           <div>
             <p className="text-white/50">
-              © {new Date().getFullYear()} - KeenKeeper. All rights reserved.
+              © {new Date().getFullYear()} - KeenKeeper. All rights reserved by Md. Majedul Islam.
             </p>
           </div>
           <nav className="grid grid-flow-col gap-5 text-white/50">
