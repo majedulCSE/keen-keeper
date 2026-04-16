@@ -2,7 +2,7 @@ import FriendCard from "@/components/ui/FriendCard";
 import React from "react";
 
 const YourFriends = async () => {
-  const res = await fetch("http://localhost:3000/data.json" , {cache :"no-store"});
+  const res = await fetch("https://keen-keeper-liard.vercel.app/data.json" , {cache :"no-store"});
   const friends = await res.json();
 //   console.log(friends);
 

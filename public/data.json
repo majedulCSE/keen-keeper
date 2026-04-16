@@ -94,53 +94,5 @@
     "bio": "Connected through community volunteering events. We often talk about family, travel dreams, and ways to support local causes together.",
     "goal": 14,
     "next_due_date": "2025-07-25"
-  },
-  {
-  "id": 9,
-  "name": "Omar Hassan",
-  "picture": "https://images.pexels.com/photos/220453/pexels-photo-220453.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-  "email": "omar.hassan@email.com",
-  "days_since_contact": 3,
-  "status": "on-track",
-  "tags": ["colleague", "gym buddy"],
-  "bio": "Met at work and later bonded over fitness routines. We usually discuss career growth, workouts, and weekend plans.",
-  "goal": 10,
-  "next_due_date": "2025-07-20"
-},
-{
-  "id": 10,
-  "name": "Aisha Rahman",
-  "picture": "https://images.pexels.com/photos/774909/pexels-photo-774909.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-  "email": "aisha.rahman@email.com",
-  "days_since_contact": 12,
-  "status": "overdue",
-  "tags": ["university friend", "designer"],
-  "bio": "We studied together at university and still share ideas about design, creativity, and freelance opportunities.",
-  "goal": 7,
-  "next_due_date": "2025-07-15"
-},
- {
-  "id": 11,
-  "name": "Md. Imran Hossain",
-  "picture": "https://images.pexels.com/photos/1681010/pexels-photo-1681010.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-  "email": "imran.hossain@email.com",
-  "days_since_contact": 5,
-  "status": "on-track",
-  "tags": ["colleague", "developer"],
-  "bio": "We work together on web development projects and often discuss new tech stacks and best practices.",
-  "goal": 10,
-  "next_due_date": "2025-07-22"
-},
-{
-  "id": 12,
-  "name": "Nusrat Jahan Mim",
-  "picture": "https://images.pexels.com/photos/1181686/pexels-photo-1181686.jpeg?auto=compress&cs=tinysrgb&w=600&h=600&fit=crop",
-  "email": "nusrat.mim@email.com",
-  "days_since_contact": 9,
-  "status": "on-track",
-  "tags": ["friend", "volunteer"],
-  "bio": "We met through a volunteer program and stay connected while working on community support activities.",
-  "goal": 14,
-  "next_due_date": "2025-07-28"
-}
+  }
 ]
