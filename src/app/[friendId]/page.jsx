@@ -14,7 +14,7 @@ const FriendDetailPage = async ({ params }) => {
 
   // console.log(friendId);
 
-  const res = await fetch("http://localhost:3000/data.json");
+  const res = await fetch("https://keen-keeper-liard.vercel.app/data.json");
   const friends = await res.json();
 
   console.log("friendId from params:", friendId);
