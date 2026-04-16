@@ -106,10 +106,10 @@ const FriendDetailsPageRight = ({ matchFriend }) => {
 
       <div className="card bg-base-100 shadow-md justify-center border border-base-200 p-7 space-y-4">
         <h2 className="text-2xl text-black/75 font-semibold">Quick Check-In</h2>
-        <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-2 ">
+        <div className=" grid md:grid-cols-2 lg:grid-cols-3 gap-2">
           <div
             onClick={() => btnHandler("call")}
-            className="card bg-[#F8FAFC] justify-center border border-base-300 items-center shadow-sm"
+            className="card bg-[#F8FAFC] justify-center border border-base-300 items-center hover:bg-linear-to-r from-[#0a015718] to-[#02c73318] hover:shadow-md hover:shadow-indigo-400/50 hover:-translate-y-2 transition duration-300"
           >
             <div className="px-5 py-7 text-center flex flex-col justify-center items-center">
               <LuPhoneCall className="text-4xl font-bold mb-4" />
@@ -118,7 +118,7 @@ const FriendDetailsPageRight = ({ matchFriend }) => {
           </div>
           <div
             onClick={() => btnHandler("text")}
-            className="card bg-[#F8FAFC] justify-center border border-base-300 items-center shadow-sm"
+            className="card bg-[#F8FAFC] justify-center border border-base-300 items-center  hover:bg-linear-to-r from-[#0a015718] to-[#02c73318] hover:shadow-md hover:shadow-indigo-400/50 hover:-translate-y-2 transition duration-300"
           >
             <div className="px-5 py-7 text-center flex flex-col justify-center items-center">
               <BiMessageDots className="text-4xl font-bold mb-4" />
@@ -127,7 +127,7 @@ const FriendDetailsPageRight = ({ matchFriend }) => {
           </div>
           <div
             onClick={() => btnHandler("video")}
-            className="card bg-[#F8FAFC] justify-center border border-base-300 items-center shadow-sm"
+            className="card bg-[#F8FAFC] justify-center border border-base-300 items-center  hover:bg-linear-to-r from-[#0a015718] to-[#02c73318] hover:shadow-md hover:shadow-indigo-400/50 hover:-translate-y-2 transition duration-300"
           >
             <div className="px-5 py-7 text-center flex flex-col justify-center items-center ">
               <LiaVideoSolid className="text-4xl font-bold mb-4" />

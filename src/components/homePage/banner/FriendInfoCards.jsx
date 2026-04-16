@@ -11,7 +11,7 @@ const FriendInfoCards = () => {
       </div>
       <div className="card bg-base-100 justify-center items-center shadow-sm border border-base-200">
         <div className="p-10 text-center">
-          <h2 className="text-4xl font-bold mb-4 text-[#244D3F]">3</h2>
+          <h2 className="text-4xl font-bold mb-4 text-[#244D3F]">5</h2>
           <p className="text-gray-500">On Track</p>
         </div>
       </div>

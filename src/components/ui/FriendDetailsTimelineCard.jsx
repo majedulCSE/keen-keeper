@@ -8,7 +8,7 @@ const FriendDetailsTimelineCard = ({ timeline }) => {
   console.log(matchFriend);
   return (
     <div className=" text-xl text-black flex flex-col sm:flex-row justify-center gap-4 sm:gap-2 sm:justify-between items-center border-b border-black/20 p-5">
-      <div className="flex items-center justify-center gap-3 ">
+      <div className="flex items-center justify-center gap-3">
         <div>
           {type === "call" && (
             <LuPhoneCall className="text-3xl md:text-4xl font-bold" />
